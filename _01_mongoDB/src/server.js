@@ -13,9 +13,9 @@ app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }));
 
 async function connectToMongoDB() {
-  const pass = "wnBBo8lhpbSYY4AK"; // retrive it in mongoDB. https://cloud.mongodb.com/v2/6413ddc3e031d16134a4dccc#/security/database/users
+  const pass = "NzbyA7kxiGkIGafv"; // retrive it in mongoDB. https://cloud.mongodb.com/v2/6413ddc3e031d16134a4dccc#/security/database/users
   await mongoose.connect(
-    `mongodb+srv://tempUser01:${pass}@maindevcluster.ycczv11.mongodb.net/?retryWrites=true&w=majority`
+    `mongodb+srv://generalUser:${pass}@maindevcluster.ycczv11.mongodb.net/?retryWrites=true&w=majority`
   );
   console.log("connected to mongoDB");
 }
